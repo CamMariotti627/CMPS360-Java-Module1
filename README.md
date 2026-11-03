@@ -68,6 +68,41 @@ Average: 55.166666666666664
 Status: Failed
 ```
 
+### Java source code vs Bytecode 
+Source code is the highest level human readable code.  It's written by programmers using programming languages like java, c++, and python.  It's designed to be easily edited and understood by humans, and is translated into a bytecode to be read by the computer.  Bytecode is a lower level intermediate representation of the source code.  It's generated after the source code is compiled by a virtual machine like JVM and Python Interpreter and is not readable by humans.  
 
-### Final Reflection
-I used this opportunity to refresh on a number of coding aspects that I had felt shaky on up to this point, and applied problem solving & critical analysis to the grade assignment to improve the program we wrote in class and make it more usable in future cases.  I have been seeking to gain a stronger understanding of the effective application of logic in progamming to critically analyze, assess, and solve problems.  Java has been interesting to learn.  It seems clear that the basic syntax is pretty similar to other languages like JavaScript, and a lesser overlap with the syntax and functionality of SQL.  I struggled initially with the concepts of compiling, and conflated the functinality of a JVM, and a VM like we've used in previous classes to create databases that caused some confusion at the start.  I'm really excited to see what else this language is capable of, and took the time to make a study guide for quick reference.  Refreshers on the anatomy of different types of statements & commands has really helped to restore my confidence in my ability to code.  
+
+
+## Assignment 2: Inventory Application
+
+### Files
+
+- `Product.java`: the `Product` class, with private attributes (name, price, quantity), a constructor, `calculateInventoryValue()`, and getters.
+- `InventoryApp.java`: creates three `Product` objects, prints each product's details and inventory value to the console, and shows the same summary in a `JOptionPane` dialog. 
+
+### How to run
+
+```
+cd Assignment2
+javac Product.java InventoryApp.java
+java InventoryApp
+```
+
+### Output
+
+Console:
+
+```
+12 in Print: 4 x $20.00 = $80.00
+18 in Print: 3 x $30.00 = $90.00
+32 in Print: 2 x $45.00 = $90.00
+Total Inventory Value: $260.00
+```
+
+A dialog box opens showing the same four lines.
+
+
+
+### Reflection: How do Classes, Objects, Attributes, and Methods all work together in this application? 
+
+InventoryApp is a class that creates objects from the product class using new. The objects product1, product2, product3, and their attributes name, price, and quantity are private classes so InventoryApp can't interact with their attributes directly.  To do so it calls a method, which is a getter program to read the data, and use calculateInventoryValue() to calculate & return the result, which is printed in the terminal and shown in the dialog box. InventoryApp is also started by the method main().
